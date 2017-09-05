@@ -1,7 +1,9 @@
 # miniseed-sncl
 
 > NOTE: adoption of MiniSEED is a not an active discussion topic within
-> INTERMAGNET at this time.  It is currently being discussed to coordinate
+> INTERMAGNET at this time.
+
+> It is currently being discussed to coordinate
 > data exchange between USGS, NRCAN, and any other international groups who
 > may be interested.  It may also be proposed for adoption by INTERMAGNET
 > at a future time.
@@ -21,8 +23,10 @@ We welcome input from INTERMAGNET members, and other organizations and
 individuals.
 
 
-MiniSEED conventions are described in a SEED Manual Appendix:
+- MiniSEED conventions are described in a SEED Manual Appendix:
+
   http://www.fdsn.org/seed_manual/SEEDManual_V2.4_Appendix-A.pdf
 
-Also as part of the full SEED manual (p133):
-  http://www.fdsn.org/seed_manual/SEEDManual_V2.4.pdf
+- Also as part of the full SEED manual (p133):
+
+http://www.fdsn.org/seed_manual/SEEDManual_V2.4.pdf
