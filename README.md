@@ -29,4 +29,4 @@ individuals.
 
 - Also as part of the full SEED manual (p133):
 
-http://www.fdsn.org/seed_manual/SEEDManual_V2.4.pdf
+  http://www.fdsn.org/seed_manual/SEEDManual_V2.4.pdf
