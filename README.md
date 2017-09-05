@@ -2,7 +2,7 @@
 
 > NOTE: adoption of MiniSEED is a not an active discussion topic within
 > INTERMAGNET at this time.  It is currently being discussed to coordinate
-> data exchange between USGS, NRCAN, and any other internation groups who
+> data exchange between USGS, NRCAN, and any other international groups who
 > may be interested.  It may also be proposed for adoption by INTERMAGNET
 > at a future time.
 
