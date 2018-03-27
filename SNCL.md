@@ -40,9 +40,9 @@ Triaxial analog magnetometer
 
 - instrument code `F`
 - orientation codes
-  - `I` observatory/instrument north
-  - `J` observatory/instrument east
-  - `K` observatory/instrument down
+  - `U` observatory/instrument north
+  - `V` observatory/instrument east
+  - `W` observatory/instrument down
 - location codes
   - `R0` internet
   - `R1` GOES
@@ -155,37 +155,41 @@ Below are remaining characters in the form:
 >   - third character
 
 - `E` electronic test point (V)
-  - `N` h (observatory/instrument north) volt
-  - `E` e (observatory/instrument east) volt
-  - `Z` z (observatory/instrument down) volt
+  - `U` h (observatory/instrument north) volt
+  - `V` e (observatory/instrument east) volt
+  - `W` z (observatory/instrument down) volt
   - `F` f (observatory/instrument total field) volt
 
 - `F` - magnetometer (T)
-  - `I`/`J`/`K` observatory north/east/down
+  - `U`/`V`/`W` observatory north/east/down
   - `H`/`D` magnetic horizontal/declination
   - `X`/`Y`/`Z` geographic north/east/down
   - `F` magnetic total field
   - `G` delta f (total field - |vector field|)
 - `K` temperature (C or K)
   - `O` outside
+  - `F` fluxgate
+  - `E` electronics
 - `Q` electric potential (V)
-  - `N` e-field north
-  - `E` e-field east
+  - `U` e-field observatory/instrument north
+  - `V` e-field observatory/instrument east
+  - `X` e-field geographic north
+  - `Y` e-field geographic east
 - `X` derived or generated
   - `A` ae
   - `K` k index
   - `3` DST 3 channel
   - `4` DST 4 channel
 - `Y` non-specific instrument
-  - `N` h (observatory/instrument north) bin
-  - `E` e (observatory/instrument east) bin
-  - `Z` z (observatory/instrument down) bin
+  - `U` h (observatory/instrument north) bin
+  - `V` e (observatory/instrument east) bin
+  - `W` z (observatory/instrument down) bin
   - `F` f (observatory/instrument total field) bin
 
 #### Examples
-1 minute observatory H: UFN
-1 minute observatory E: UFE
-1 minute observatory Z: UFZ
+1 minute observatory H: UFU
+1 minute observatory E: UFV
+1 minute observatory Z: UFW
 1 minute observatory F: UFF
 1 minute magnetic H: UFH
 1 minute magnetic D: UFD
@@ -222,14 +226,14 @@ for the data, e.g. `R0` is raw-internet, `R1` is raw-satellite, `A0` is adjusted
 These examples are combinations of channel and location codes (5 characters total).
 
 These are the 10Hz channels to be transmitted from each observatory:
-- `BEIR0` 10Hz observatory H voltage
-- `BYIR0` 10Hz observatory H bin
+- `BEUR0` 10Hz observatory H voltage
+- `BYUR0` 10Hz observatory H bin
 
-- `BEJR0` 10Hz observatory E voltage
-- `BYJR0` 10Hz observatory E bin
+- `BEVR0` 10Hz observatory E voltage
+- `BYVR0` 10Hz observatory E bin
 
-- `BEKR0` 10Hz observatory Z voltage
-- `BYKR0` 10Hz observatory Z bin
+- `BEWR0` 10Hz observatory Z voltage
+- `BYWR0` 10Hz observatory Z bin
 
 - `BEFR0` 10Hz observatory F voltage
 - `BYFR0` 10Hz observatory F bin
@@ -238,9 +242,9 @@ Plus housekeeping channels like temperature
 
 From the above channels, the following engineering-unit channels can be generated:
 
-- `BFIR0` 10Hz observatory H pT
-- `BFJR0` 10Hz observatory E pT
-- `BFKR0` 10Hz observatory Z pT
+- `BFUR0` 10Hz observatory H pT
+- `BFVR0` 10Hz observatory E pT
+- `BFWR0` 10Hz observatory Z pT
 - `BFFR0` 10Hz observatory F pT
 
 - `BFHR0` 10Hz magnetic H pT
@@ -254,9 +258,9 @@ From engineering-unit channels, additional derived channels are generated:
 
 - `BFGR0` 10Hz deltaF pT (from observatory components)
 
-- `LFNR0` 1Hz observatory H pT
-- `LFER0` 1Hz observatory E pT
-- `LFZR0` 1Hz observatory Z pT
+- `LFUR0` 1Hz observatory H pT
+- `LFVR0` 1Hz observatory E pT
+- `LFWR0` 1Hz observatory Z pT
 - `LFFR0` 1Hz observatory F pT
 
 - `LFHR0` 1Hz magnetic H pT
@@ -274,9 +278,9 @@ From one-second channels, additional derived channels are generated:
 
 And equivalent Sq/dist channels for D,X,Y,Z
 
-- `UFNR0` 1-minute observatory H pT
-- `UFER0` 1-minute observatory E pT
-- `UFZR0` 1-minute observatory Z pT
+- `UFUR0` 1-minute observatory H pT
+- `UFVR0` 1-minute observatory E pT
+- `UFWR0` 1-minute observatory Z pT
 - `UFFR0` 1-minute observatory F pT
 
 - `UFHR0` 1-minute magnetic H pT
@@ -284,7 +288,7 @@ And equivalent Sq/dist channels for D,X,Y,Z
 
 - `UFXR0` 1-minute geographic north pT
 - `UFYR0` 1-minute geographic east pT
-
+- `UFZR0` 1-minute geographic down pT
 
 Derived indexes within the `NT` network `USGS` "station"
 - `UX3R0` 3 channel USGS Dist
