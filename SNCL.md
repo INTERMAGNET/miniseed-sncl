@@ -217,6 +217,7 @@ for the data, e.g. `R0` is raw-internet, `R1` is raw-satellite, `A0` is adjusted
 - `D` Disturbance for channel, from `_0` location code
 - `Q` Solar Quiet for channel, from `_0` location code
 - `V` Secular Variation for channel, from `_0` location code
+- `T` Time derivative for channel, from `_0` location code
   
 
 
